@@ -24,6 +24,13 @@ $(document).on("keydown", function(){
     gameStarted = true;
 });
 
+$(document).on("click", function(){
+    if(!gameStarted){
+        nextSequence(level);
+    }
+    gameStarted = true;
+});
+
 
 function nextSequence(){
     $("h1").text("Level " +level);
